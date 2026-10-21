@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Portfolio Template - Documentation</title>
+<meta name="description" content="Installation, customization and update guide for the Alex personal portfolio HTML template.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="stylesheet" href="doc.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation">Menu</button>
+  <h1>Alex Portfolio Template</h1><span class="ver">Documentation v1.1</span>
+  <span class="spacer"></span>
+  <button class="icon-btn" id="themeBtn" type="button">Light / Dark</button>
+</header>
+<nav class="sidebar" id="sidebar" aria-label="Documentation sections">
+  <input id="search" type="search" placeholder="Search the docs..." aria-label="Search the documentation">
+  <ul>
+    <li><a href="#intro">1. Introduction</a></li>
+    <li><a href="#install">2. Installation</a></li>
+    <li><a href="#structure">3. File structure</a></li>
+    <li><a href="#text">4. Editing text</a></li>
+    <li><a href="#colors">5. Changing colors</a></li>
+    <li><a href="#images">6. Replacing images</a></li>
+    <li><a href="#favicon">7. Favicon</a></li>
+    <li><a href="#sections">8. Sections guide</a></li>
+    <li><a href="#darkmode">9. Dark mode</a></li>
+    <li><a href="#forms">10. Contact and newsletter forms</a></li>
+    <li><a href="#responsive">11. Responsive layout</a></li>
+    <li><a href="#update">12. Updating the template</a></li>
+    <li><a href="#faq">13. FAQ</a></li>
+    <li><a href="#credits">14. Credits</a></li>
+    <li><a href="#changelog">15. Changelog and support</a></li>
+  </ul>
+</nav>
+<main>
+
+<section id="intro">
+<h2>1. Introduction</h2>
+<p>Thank you for choosing <strong>Alex</strong>, a clean one-page portfolio template for developers, designers and freelancers. It is written in plain HTML, CSS and JavaScript, so there is nothing to compile and no framework to learn. You can edit it in any text editor and publish it on any static host.</p>
+<img class="shot" src="images/section-home.png" width="1366" height="800" alt="Hero section of the Alex template on desktop" loading="lazy">
+<p class="cap">The hero section with your name, job title and call-to-action buttons (click to enlarge)</p>
+<h3>What is included</h3>
+<div class="grid">
+<div><strong>Six content sections</strong><br>Hero, About with skill bars, Services, Portfolio, Testimonials and Contact.</div>
+<div><strong>Light and dark mode</strong><br>One click toggle, remembered in the visitor's browser.</div>
+<div><strong>Filterable portfolio</strong><br>Buttons filter projects by category without reloading.</div>
+<div><strong>Testimonial slider</strong><br>Arrows, dots and automatic sliding every five seconds.</div>
+<div><strong>Fully responsive</strong><br>Mobile menu, flexible grids and no horizontal scrolling.</div>
+<div><strong>Validated code</strong><br>Passes the W3C HTML and CSS checks with no errors.</div>
+</div>
+</section>
+
+<section id="install">
+<h2>2. Installation</h2>
+<h3>Requirements</h3>
+<ul class="list"><li>A modern browser (Chrome, Edge, Firefox, Safari).</li><li>A text editor such as VS Code, Sublime Text or Notepad++.</li><li>An internet connection is only needed for the Poppins font from Google Fonts. Icons and scripts are bundled locally.</li></ul>
+<h3>Step by step</h3>
+<ol class="list">
+<li>Download the purchase package from your ThemeForest <em>Downloads</em> page and unzip it.</li>
+<li>Open the <code>Alex-Portfolio</code> folder. Double-click <code>index.html</code> to preview the template locally.</li>
+<li>Edit the files as described in this guide, then refresh the browser to see your changes.</li>
+<li>Upload the whole folder to your hosting. See the options below.</li>
+</ol>
+<h3>Publishing options</h3>
+<table>
+<tr><th>Host</th><th>How to publish</th></tr>
+<tr><td>cPanel / shared hosting</td><td>Open File Manager, go to <code>public_html</code>, upload the contents of the folder (not the folder itself) so that <code>index.html</code> sits in the root.</td></tr>
+<tr><td>Netlify</td><td>Log in, choose <em>Add new site, Deploy manually</em> and drag the folder into the upload area.</td></tr>
+<tr><td>Vercel</td><td>Install the Vercel CLI, run <code>vercel</code> inside the folder and follow the prompts.</td></tr>
+<tr><td>GitHub Pages</td><td>Push the files to a repository, then enable Pages under <em>Settings, Pages</em> and select the main branch.</td></tr>
+</table>
+</section>
+
+<section id="structure">
+<h2>3. File structure</h2>
+<p>The package is small and easy to navigate. The three files you will edit most are <code>index.html</code>, <code>style.css</code> and <code>script.js</code>.</p>
+<img class="shot" src="images/folder-structure.png" width="1720" height="844" alt="Folder structure of the Alex template" loading="lazy">
+<p class="cap">Package contents and what each file does (click to enlarge)</p>
+</section>
+
+<section id="text">
+<h2>4. Editing text</h2>
+<p>All text lives in <code>index.html</code>. Every section starts with an HTML comment such as <code>&lt;!-- About Section --&gt;</code>. Press <kbd>Ctrl</kbd> + <kbd>F</kbd>, search for that comment and change the words between the tags. Do not remove the tags or class names, as they connect the text to the styles.</p>
+<img class="shot" src="images/change-text.png" width="1720" height="742" alt="Editing the hero text in index.html" loading="lazy">
+<p class="cap">Hero text in index.html with the editable parts highlighted (click to enlarge)</p>
+<h3>Skills, services and portfolio items</h3>
+<ul class="list">
+<li><strong>Skill bars:</strong> change the label, the visible percentage and the <code>data-width</code> value of the <code>.progress</code> element. The bar animates to that width when it scrolls into view.</li>
+<li><strong>Services:</strong> each <code>.service-card</code> has an icon, a title and a description. Duplicate a whole card to add another service.</li>
+<li><strong>Portfolio items:</strong> copy one <code>.portfolio-item</code> block, change the image, the title and the <code>data-category</code> value (<code>web</code>, <code>app</code> or <code>graphic</code>).</li>
+</ul>
+<h3>Adding a portfolio category</h3>
+<p>Add a new button in the filter bar, then give your items the same value in <code>data-category</code>:</p>
+<div class="codebox"><button class="copy" type="button">Copy</button><pre>&lt;button class="filter-btn" data-filter="photo"&gt;Photography&lt;/button&gt;</pre></div>
+<div class="codebox"><button class="copy" type="button">Copy</button><pre>&lt;div class="portfolio-item" data-category="photo"&gt; ... &lt;/div&gt;</pre></div>
+</section>
+
+<section id="colors">
+<h2>5. Changing colors</h2>
+<p>Colors are controlled by CSS variables at the very top of <code>style.css</code>. Changing a variable updates every element that uses it, so you never need to hunt through the file.</p>
+<img class="shot" src="images/change-colors.png" width="1720" height="878" alt="CSS color variables in style.css" loading="lazy">
+<p class="cap">The color variables in style.css (click to enlarge)</p>
+<div class="tip"><strong>Tip:</strong> use a contrast checker such as webaim.org/resources/contrastchecker to make sure your new primary color keeps text readable on white and on dark backgrounds.</div>
+</section>
+
+<section id="images">
+<h2>6. Replacing images</h2>
+<p>Open the <code>images</code> folder and overwrite each file with your own picture, keeping the same file name. The recommended sizes below keep the layout sharp without making the page heavy.</p>
+<img class="shot" src="images/replace-images.png" width="1720" height="674" alt="Image files and recommended sizes" loading="lazy">
+<p class="cap">List of image files and their recommended dimensions (click to enlarge)</p>
+<p>If you prefer a different file name, update the matching <code>src</code> attribute in <code>index.html</code> and write a short, meaningful <code>alt</code> description for accessibility. Avoid spaces in file names.</p>
+<img class="shot" src="images/section-portfolio.png" width="1366" height="800" alt="Portfolio section with project cards" loading="lazy">
+<p class="cap">The portfolio grid. Hovering a card reveals the title and link buttons (click to enlarge)</p>
+</section>
+
+<section id="favicon">
+<h2>7. Favicon</h2>
+<p>The template ships with four icon files in the root folder and the matching links inside the <code>&lt;head&gt;</code> of <code>index.html</code>. Replace the files with your own icons using the same names and sizes: <code>favicon.svg</code> (any size), <code>favicon.ico</code> (16, 32 and 48 px), <code>favicon-32x32.png</code> and <code>apple-touch-icon.png</code> (180 x 180 px).</p>
+<img class="shot" src="images/favicon.png" width="1720" height="470" alt="Favicon links inside the head tag" loading="lazy">
+<p class="cap">Favicon links in the head of index.html (click to enlarge)</p>
+</section>
+
+<section id="sections">
+<h2>8. Sections guide</h2>
+<h3>About</h3>
+<p>Shows your photo, a short biography, contact details, the animated skill bars and a <em>Download CV</em> button. Point the button to your PDF by changing <code>href="#"</code> to for example <code>href="cv/alex-cv.pdf"</code> and adding the <code>download</code> attribute.</p>
+<img class="shot" src="images/section-about.png" width="1366" height="800" alt="About section with skill bars" loading="lazy">
+<p class="cap">About section with biography and skills (click to enlarge)</p>
+<h3>Services</h3>
+<p>Six cards with icons. Icons come from Font Awesome 5 Free, so you can browse fontawesome.com/v5/search?m=free and use any free class such as <code>fas fa-camera</code>.</p>
+<img class="shot" src="images/section-services.png" width="1366" height="800" alt="Services section" loading="lazy">
+<p class="cap">Services grid (click to enlarge)</p>
+<h3>Testimonials and Contact</h3>
+<p>Each testimonial is a <code>.testimonial-slide</code>. When you add or remove a slide, add or remove one <code>&lt;span class="dot"&gt;&lt;/span&gt;</code> in <code>.slider-dots</code> so the number of dots matches. Update the address, e-mail and phone in the contact cards and the footer.</p>
+<img class="shot" src="images/section-testimonials.png" width="1366" height="800" alt="Testimonials slider" loading="lazy">
+<p class="cap">Testimonial slider with arrows and dots (click to enlarge)</p>
+<img class="shot" src="images/section-contact.png" width="1366" height="800" alt="Contact section" loading="lazy">
+<p class="cap">Contact cards and form (click to enlarge)</p>
+<h3>Changing the slider speed</h3>
+<p>In <code>script.js</code> find the following line. The number is in milliseconds.</p>
+<div class="codebox"><button class="copy" type="button">Copy</button><pre>setInterval(nextSlide, 5000);</pre></div>
+<h3>Removing a section</h3>
+<p>Delete the whole <code>&lt;section&gt;</code> block and the matching link in the header navigation and footer. The scripts ignore sections that do not exist.</p>
+</section>
+
+<section id="darkmode">
+<h2>9. Dark mode</h2>
+<p>The moon/sun switch in the header toggles a <code>data-theme="dark"</code> attribute. The choice is stored in <code>localStorage</code>, and on the first visit the template follows the visitor's system setting. To start in dark mode for every new visitor, open <code>script.js</code> and change the condition <code>if (savedTheme === 'dark' || (!savedTheme &amp;&amp; prefersDark))</code> to <code>if (savedTheme !== 'light')</code>.</p>
+<img class="shot" src="images/dark-mode.png" width="1366" height="800" alt="Template in dark mode" loading="lazy">
+<p class="cap">The same hero section in dark mode (click to enlarge)</p>
+</section>
+
+<section id="forms">
+<h2>10. Contact and newsletter forms</h2>
+<p>The forms are front-end only. By default, submitting them shows a thank-you message and clears the fields, so the demo works without a server. Before going live, connect them to a service such as Formspree, Netlify Forms, EmailJS or your own PHP script.</p>
+<img class="shot" src="images/contact-form.png" width="1720" height="776" alt="Connecting the contact form" loading="lazy">
+<p class="cap">How to connect the contact form to a service (click to enlarge)</p>
+</section>
+
+<section id="responsive">
+<h2>11. Responsive layout</h2>
+<p>The layout adapts at 992 px, 768 px and 576 px. On phones the navigation collapses into a hamburger menu and the grids stack into one column. You can test it by narrowing your browser window or using the device toolbar in Chrome DevTools (F12).</p>
+<div class="grid">
+<div><img class="shot" src="images/mobile-home.png" width="780" height="1520" alt="Template on a phone" loading="lazy">
+<p class="cap">Mobile layout (click to enlarge)</p></div>
+<div><img class="shot" src="images/mobile-menu.png" width="780" height="1520" alt="Mobile navigation menu open" loading="lazy">
+<p class="cap">Mobile menu (click to enlarge)</p></div>
+</div>
+</section>
+
+<section id="update">
+<h2>12. Updating the template</h2>
+<p>When a new version is released you will see it on your ThemeForest <em>Downloads</em> page. To update safely:</p>
+<ol class="list">
+<li>Download the new package and keep your current site folder as a backup.</li>
+<li>Compare the changelog below with your version number.</li>
+<li>Copy the new <code>style.css</code> and <code>script.js</code> over your old ones. If you edited those files, use a diff tool such as the free WinMerge or the VS Code <em>Compare Selected</em> feature to merge only the changes.</li>
+<li>Your content in <code>index.html</code> and your own pictures in <code>images</code> are never touched by an update unless the changelog says so.</li>
+<li>Clear your browser cache and test every section before uploading.</li>
+</ol>
+<div class="tip"><strong>Tip:</strong> keep your customizations in a separate <code>custom.css</code> file loaded after <code>style.css</code>. Then future updates only require replacing <code>style.css</code>.</div>
+<div class="codebox"><button class="copy" type="button">Copy</button><pre>&lt;link rel="stylesheet" href="style.css"&gt;
+&lt;link rel="stylesheet" href="custom.css"&gt;</pre></div>
+</section>
+
+<section id="faq">
+<h2>13. FAQ</h2>
+<details><summary>The page looks unstyled on my server.</summary><p>Make sure <code>style.css</code> is in the same folder as <code>index.html</code> and that file names keep their lowercase spelling. Some servers are case sensitive.</p></details>
+<details><summary>My new image does not appear.</summary><p>Check that the file name in <code>src</code> matches exactly, including the extension, and avoid spaces in names.</p></details>
+<details><summary>Icons are showing as squares.</summary><p>Keep the <code>vendor/fontawesome</code> folder complete: the <code>css</code> and <code>webfonts</code> folders must stay next to each other.</p></details>
+<details><summary>Can I use the template for client projects?</summary><p>Yes, according to the Envato license you purchased. Regular License is for one end product, Extended License is for a product that charges end users.</p></details>
+<details><summary>How do I change the font?</summary><p>Replace the Google Fonts link in the head of <code>index.html</code> with the font you want, then update the <code>font-family</code> value in <code>style.css</code>.</p></details>
+</section>
+
+<section id="credits">
+<h2>14. Credits</h2>
+<table>
+<tr><th>Resource</th><th>Use</th><th>License</th></tr>
+<tr><td>Font Awesome Free 5.15.4</td><td>Icons (bundled in vendor/fontawesome)</td><td>Icons CC BY 4.0, fonts SIL OFL 1.1, code MIT</td></tr>
+<tr><td>Poppins by Indian Type Foundry</td><td>Typeface via Google Fonts</td><td>SIL Open Font License 1.1</td></tr>
+<tr><td>Demo photographs</td><td>Preview only</td><td>Included for demonstration. They are not part of the licensed template, replace them with your own images.</td></tr>
+</table>
+</section>
+
+<section id="changelog">
+<h2>15. Changelog and support</h2>
+<h3>Version 1.1</h3>
+<ul class="list">
+<li>Fixed all W3C validator errors (image file names without spaces, valid markup).</li>
+<li>Added favicon set and apple-touch-icon.</li>
+<li>Fixed JavaScript console errors (invalid <code>#</code> selector, missing library).</li>
+<li>Bundled Font Awesome locally and replaced the external animation library with a built-in reveal script.</li>
+<li>Optimized images from 16 MB to under 1 MB.</li>
+<li>Improved accessibility with descriptive alt text and button labels, and fixed horizontal scroll on phones.</li>
+</ul>
+<h3>Version 1.0</h3>
+<ul class="list"><li>Initial release.</li></ul>
+<h3>Support</h3>
+<p>If you have a question, leave a comment on the item page on ThemeForest or use the author profile contact form. Please mention your purchase code and browser version. Support covers template issues and questions about the included features.</p>
+</section>
+
+</main>
+<div class="lightbox" id="lightbox"><img src="images/section-home.png" alt=""></div>
+<script src="doc.js"></script>
+</body>
+</html>
